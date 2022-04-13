@@ -15,6 +15,10 @@ class studentController extends Controller
     }
 
     public function insertNewStudent(){
-        echo "asd";die;
+        dd($_POST);
+    }
+
+    public function list(){
+        return view('student.list');
     }
 }

@@ -10,7 +10,11 @@
     <h1>Nuevo Estudiante</h1>
     <form action="/student/new" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
-        <button type="submit">Enviar</button>
+        <input type="text" name="name" placeholder="Nombre"> <br><br>
+        <input type="text" name="lastName" placeholder="Apellido"> <br><br>
+        <input type="number" name="dni" placeholder="DNI" required> <br><br>
+        <input type="email" name="email" placeholder="E-mail" required><br><br>
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>

@@ -44,3 +44,4 @@ Route::get('/posts/{post}/comments/{comment}', [personaController::class, 'index
 Route::get('/student', [studentController::class, 'index']);
 Route::get('/student/new', [studentController::class, 'new']);
 Route::post('/student/new', [studentController::class, 'insertNewStudent']);
+Route::get('/student/list', [studentController::class, 'list']);
