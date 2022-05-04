@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\personaController;
-use App\Http\Controllers\studentController;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,8 @@ use App\Http\Controllers\studentController;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return 'Bienvenidos a la pagina';
 });
 
 Route::get('iniciar', function () {
@@ -41,7 +42,4 @@ Route::get('/posts/{post}/comments/{comment}', [personaController::class, 'index
             //continuar para mostrar usuario 
 // Route::get('/user/{name}, function($name)' [personaController::class, 'index']);
 
-Route::get('/student', [studentController::class, 'index']);
-Route::get('/student/new', [studentController::class, 'new']);
-Route::post('/student/new', [studentController::class, 'insertNewStudent']);
-Route::get('/student/list', [studentController::class, 'list']);
+Route::resource('student', StudentController::class);
